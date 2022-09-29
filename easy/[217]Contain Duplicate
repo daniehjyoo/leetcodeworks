@@ -1,0 +1,19 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        hashset = set()
+        
+        for n in nums:
+            if n in hashset:
+                return True
+            hashset.add(n)
+        return False
+        
+        ##go through nums list and check if there is the same element in the hashset  
+        ##if there is we return true, else we add that number to the hashset
+        
+       # return len(nums) != len(set(nums))
+    
+    ##hashset creates a unique non duplicate element
+    ##check len of nums and set to see if they differ
+    ##same length means there are no duplicates, if lengths differ at least one element is a duplicate
